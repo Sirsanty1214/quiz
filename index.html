@@ -16,12 +16,15 @@
             <table id="estudiantes">
                 <thead>
                     <tr>
-                        <th>Código</th>
-                        <th>Nombre</th>
-                        <th>20%</th>
-                        <th>20%</th>
-                        <th>20%</th>
-                        <th>40%</th>
+                        <td>Eliminar</td>
+                        <td>Código</td>
+                        <td>Nombre</td>
+                        <td>20%</td>
+                        <td>20%</td>
+                        <td>20%</td>
+                        <td>40%</td>
+                        <td>Definitiva</td>
+                        <td>A/No</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,22 +40,35 @@
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
         
-                <label for="porcentaje1">20%:</label>
+                <label for="nota1">20%:</label>
                 <input type="number" id="nota1" name="nota1" required>
         
-                <label for="porcentaje2">20%:</label>
+                <label for="nota2">20%:</label>
                 <input type="number" id="nota2" name="nota2" required>
         
-                <label for="porcentaje3">20%:</label>
+                <label for="nota3">20%:</label>
                 <input type="number" id="nota3" name="nota3" required>
         
-                <label for="porcentaje4">40%:</label>
+                <label for="nota4">40%:</label>
                 <input type="number" id="nota4" name="nota4" required>
         
                 <button id="guargar" type="button" onclick="guardarRegistro()">guardar</button>
             </form>
         </section>
-
+        <div id="modal" class="modal"> 
+            <div class="modal-content">
+                <p>¿Estás seguro de que quieres eliminar este registro?</p>
+                <button id="modalSi">Sí</button>
+                <button id="modalNo">No</button>
+            </div>
+        </div>
+        <div id="msg" class="modal">
+            <div class="modal-content">
+                <p>El código ya existe.</p> 
+                <button id="cerrarError">Cerrar</button>
+            </div>
+        </div>
+        
     </main>
     <script src="JAVA/js.js"></script>
 </body>
