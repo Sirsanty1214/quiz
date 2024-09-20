@@ -13,16 +13,44 @@
             <h1>SANTIAGO BONILLA NIÑO - DANIEL ALEJANDRO CADENA</h1>
         </header>
         <section id="section1">
-            <table>
-                <td>
-                </td>
+            <table id="estudiantes">
+                <thead>
+                    <tr>
+                        <td>Código</td>
+                        <td>Nombre</td>
+                        <td>20%</td>
+                        <td>20%</td>
+                        <td>20%</td>
+                        <td>40%</td>
+                    </tr>
+                </thead>
             </table>
         </section>
         <section id="section2">
-            formulario
+            <form id="registro">
+                <label for="codigo">Código:</label>
+                <input type="text" id="codigo" name="codigo" required>
+        
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+        
+                <label for="porcentaje1">20%:</label>
+                <input type="number" id="porcentaje1" name="porcentaje1" required>
+        
+                <label for="porcentaje2">20%:</label>
+                <input type="number" id="porcentaje2" name="porcentaje2" required>
+        
+                <label for="porcentaje3">20%:</label>
+                <input type="number" id="porcentaje3" name="porcentaje3" required>
+        
+                <label for="porcentaje4">40%:</label>
+                <input type="number" id="porcentaje4" name="porcentaje4" required>
+        
+                <button id="guargar" type="button" onclick="guardarRegistro()">guardar</button>
+            </form>
         </section>
 
     </main>
-
+    <script src="JAVA/js.js"></script>
 </body>
 </html>

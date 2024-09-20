@@ -22,13 +22,41 @@ header{
     grid-area: h;
 }
 #section1{
-    background-color: #c7eef8;
+    background-color: #f5f5f5;
     grid-area: s1;
 }
 
 #section2{
-    background-color: #94b1b8;
+    background-color: #8b9e9e;
     grid-area: s2;
 
+}
+#registro {
+    overflow: hidden;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #000000;
+}
+
+label {
+    overflow: hidden;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 8px;
+}
+
+button {
+    padding: 10px 15px;
+}
+
+#estudiantes{
+    border-width: 13px;
+    border-color: black;
+    border-style: solid;
 }
 
