@@ -10,7 +10,7 @@
 <body>
     <main>
         <header>
-            <h1>SANTIAGO BONILLA NIÑO - DANIEL ALEJANDRO CADENA</h1>
+            <h1 class="txt">SANTIAGO BONILLA NIÑO - DANIEL ALEJANDRO CADENA</h1>
         </header>
         <section id="section1">
             <table id="estudiantes">
@@ -34,8 +34,9 @@
         </section>
         <section id="section2">
             <form id="registro">
+                
                 <label for="codigo">Código:</label>
-                <input type="text" id="codigo" name="codigo" required>
+                <input type="number" id="codigo" name="codigo" required>
         
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
@@ -64,7 +65,7 @@
         </div>
         <div id="msg" class="modal">
             <div class="modal-content">
-                <p>El código ya existe.</p> 
+                <p>datos incorrectos.</p> 
                 <button id="cerrarError">Cerrar</button>
             </div>
         </div>
