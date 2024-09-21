@@ -42,14 +42,12 @@ document.getElementById('modalNo').addEventListener('click', function () {
     modal.style.display = 'none';
 });
 
-// Nueva función para calcular la nota definitiva
 function definitiva(nota1, nota2, nota3, nota4) {
     return (nota1 * 0.2) + (nota2 * 0.2) + (nota3 * 0.2) + (nota4 * 0.4);
 }
 
-// Función para validar las notas
 function validarNota(nota) {
-    const regex = /^\d+(\.\d{1,2})?$/; // Permite hasta dos decimales
+    const regex = /^\d+(\.\d{1,2})?$/; 
     return regex.test(nota) && parseFloat(nota) >= 0 && parseFloat(nota) <= 5;
 }
 
@@ -66,14 +64,13 @@ function guardarRegistro() {
     const nota3 = document.getElementById('nota3').value;
     const nota4 = document.getElementById('nota4').value;
 
-    // Validar cada nota
     if (![nota1, nota2, nota3, nota4].every(validarNota)) {
-        mostrarError(); // Mostrar mensaje de error si hay una nota inválida
+        mostrarError(); 
         return;
     }
 
     const notaDefinitiva = definitiva(parseFloat(nota1), parseFloat(nota2), parseFloat(nota3), parseFloat(nota4));
-    const resultadoAprobacion = notaDefinitiva >= 3.00 ? 'A' : 'NA'; // Determinar si aprobó o no
+    const resultadoAprobacion = notaDefinitiva >= 3.00 ? 'A' : 'NA'; 
 
     const table = document.getElementById('estudiantes').getElementsByTagName('tbody')[0];
     const nuevaFila = table.insertRow();
@@ -90,8 +87,8 @@ function guardarRegistro() {
     nuevaFila.insertCell(4).textContent = nota2;
     nuevaFila.insertCell(5).textContent = nota3;
     nuevaFila.insertCell(6).textContent = nota4;
-    nuevaFila.insertCell(7).textContent = notaDefinitiva.toFixed(2); // Mostrar nota definitiva en la tabla
-    nuevaFila.insertCell(8).textContent = resultadoAprobacion; // Mostrar resultado de aprobación
+    nuevaFila.insertCell(7).textContent = notaDefinitiva.toFixed(2); 
+    nuevaFila.insertCell(8).textContent = resultadoAprobacion; 
 
     document.getElementById('registro').reset();
 }
